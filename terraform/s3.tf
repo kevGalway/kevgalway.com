@@ -1,11 +1,7 @@
 # s3.tf
 
-variable "s3_bucket_name" {
-  default = ""
-}
-
 resource "aws_s3_bucket" "website_bucket" {
-  bucket = var.s3_bucket_name
+  bucket = var.domain_name
 }
 
 resource "aws_s3_bucket_website_configuration" "website_bucket_site_config" {
